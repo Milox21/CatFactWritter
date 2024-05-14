@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace CatFactWritter
 {
-    internal class Writter
+    internal interface IWritterService
     {
+        Task SaveCatFactAsync(string catFact);
     }
 }

@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace CatFactWritter
 {
-    internal class CatApiClient
+    internal interface IHttpClientService
     {
+        Task<string> GetCatFactAsync();
     }
 }
