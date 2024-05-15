@@ -8,6 +8,6 @@ namespace CatFactWritter
 {
     internal interface IWritterService
     {
-        Task SaveCatFactAsync(string catFact);
+        Task SaveToFile(string catFact);
     }
 }

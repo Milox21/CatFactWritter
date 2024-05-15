@@ -8,6 +8,6 @@ namespace CatFactWritter
 {
     internal interface IHttpClientService
     {
-        Task<string> GetCatFactAsync();
+        Task<string> GetSentence();
     }
 }

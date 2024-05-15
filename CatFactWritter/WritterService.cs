@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -8,10 +9,19 @@ namespace CatFactWritter
 {
     public class WritterService : IWritterService
     {
-        //TODO: Implementation of writting a string into a file
-        public Task SaveCatFactAsync(string catFact)
+        private readonly string fileWrittingPath;
+
+        public WritterService(string fileWrittingPath)
         {
-            throw new NotImplementedException();
+            this.fileWrittingPath = fileWrittingPath;
+        }
+
+        public async Task SaveToFile(string sentence)
+        {
+            using(StreamWriter writter = new(fileWrittingPath))
+            {
+                await writter.WriteLineAsync(sentence);
+            }
         }
     }
 }
