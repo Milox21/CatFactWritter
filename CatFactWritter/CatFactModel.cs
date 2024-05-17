@@ -7,13 +7,19 @@ using System.Threading.Tasks;
 
 namespace CatFactWritter
 {
+    /// <summary>
+    /// Represents a model for the response from the cat facts API.
+    /// </summary>
     internal class CatFactModel
     {
-        [JsonPropertyName("fact")]
+        /// <summary>
+        /// Gets or sets the cat fact.
+        /// </summary>
         public string Fact { get; set; }
 
-
-        [JsonPropertyName("lenght")]
-        public int FactLength { get; set; }
+        /// <summary>
+        /// Gets or sets the length of the cat fact.
+        /// </summary>
+        public int Length { get; set; }
     }
 }

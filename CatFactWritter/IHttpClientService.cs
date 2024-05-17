@@ -6,8 +6,18 @@ using System.Threading.Tasks;
 
 namespace CatFactWritter
 {
+    /// <summary>
+    /// Defines the interface for the HTTP client service.
+    /// </summary>
     internal interface IHttpClientService
     {
-        Task<string> GetSentence();
+        /// <summary>
+        /// Gets a sentence (cat fact) from the external API.
+        /// </summary>
+        /// <returns>
+        /// A task that represents the asynchronous operation. 
+        /// The task result contains the cat fact as a string.
+        /// </returns>
+        Task<string> GetCatFactSentence();
     }
 }
